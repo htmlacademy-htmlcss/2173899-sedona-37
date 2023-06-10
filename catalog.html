@@ -59,7 +59,7 @@
       </ul>
 
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="catalog-filter-group">
+        <fieldset class="catalog-filter-group catalog-filter-group-infra">
           <legend class="catalog-filter-title">Инфраструктура:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
@@ -83,7 +83,7 @@
           </ul>
         </fieldset>
 
-        <fieldset class="catalog-filter-group">
+        <fieldset class="catalog-filter-group catalog-filter-group-infra">
           <legend class="catalog-filter-title">Тип жилья:</legend>
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
@@ -107,39 +107,41 @@
           </ul>
         </fieldset>
 
-        <fieldset class="catalog-filter-group">
+        <fieldset class="catalog-filter-group catalog-filter-group-price">
           <legend class="catalog-filter-title">Стоимость, ₽:</legend>
         </fieldset>
-        <button class="button button-submit" type="submit">Применить</button>
-        <button class="button button-reset" type="reset">Сбросить</button>
+        <div class="buttons">
+          <button class="button button-submit" type="submit">Применить</button>
+          <button class="button button-reset" type="reset">Сбросить</button>
+        </div>
       </form>
     </header>
 
     <section class="hotel-cards">
-      <h2 class="visually-hidden">Список гостиниц</h2>
-      <p class="hotel-cards-text">Найдено гостиниц: 38</p>
-
+      <div class="sorting">
+        <h2 class="visually-hidden">Список гостиниц</h2>
+        <p class="hotel-cards-text">Найдено гостиниц: 38</p>
       <select class="select-control" aria-label="Сортировка">
         <option value="cheap">Сначала дешёвое</option>
       </select>
-
       <ul class="type-cards">
-        <li>
+        <li class="type-cards-item">
           <button type="button" class="button type-cards-tile active">
             <span class="visually-hidden">Показать карточки</span>
           </button>
         </li>
-        <li>
+        <li class="type-cards-item">
           <button type="button" class="button type-cards-slideschow">
             <span class="visually-hidden">Показать слайдшоу</span>
           </button>
         </li>
-        <li>
+        <li class="type-cards-item">
           <button type="button" class="type-cards-list">
             <span class="visually-hidden">Показать список</span>
           </button>
         </li>
       </ul>
+      </div>
 
       <ul class="hotels-list">
         <li class="hotels-item">
@@ -238,12 +240,14 @@
         <button class="btn subscription-btn" type="submit">Подписаться</button>
       </form>
     </section>
+
   </main>
 
 
   <!--Footer-->
 
   <footer class="page-footer">
+    <div class="page-footer-inner">
       <ul class="social-list">
         <li class="social-item">
           <a href="https://vk.com/htmlacademy">
@@ -269,6 +273,7 @@
       <a href="https://htmlacademy.ru/">
         <img class="contacts-img" src="images/html-academy_logo.svg" width="115" height="33" alt="Логотип HTML Academy.">
       </a>
+    </div>
   </footer>
 </body>
 </html>
