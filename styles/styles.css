@@ -19,21 +19,29 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  height: 100%;
+  min-width: 1280px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   margin: 0;
-  color: #000000;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
   background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
   display: none;
 }
-
 
 /* Header */
 
@@ -53,14 +61,14 @@ body {
 
 /*Сделал в nav-list и nav-user ширину больше чем в макете, на случай если добавятся ещё пункты меню*/
 .nav-list {
-  width: 440px;
+  min-width: 440px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .nav-user {
-  max-width: 300px;
+  min-width: 300px;
   margin-left: auto;
 }
 
@@ -97,6 +105,7 @@ body {
   background-repeat: no-repeat;
   text-align: center;
 }
+
 
 /* Добавил векторное изображение в секции hero, но есть один нюанс при изменении масштаба слева и справа иногда  видно фоновое изображение немного, это браузер так отображает или я сделал не правильно?*/
 .hero::after {
@@ -246,6 +255,7 @@ body {
 }
 
 .form-input {
+  font-family: "PT Sans", sans-serif;
   background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
 }
@@ -374,6 +384,7 @@ body {
 .catalog-filter-group {
   padding: 0;
   margin: 0;
+  border: none;
 }
 
 .catalog-filter-group-infra {
@@ -468,7 +479,7 @@ body {
   list-style: none;
 }
 
-/* Сдесь добавил gap, или стоит лучше сделать через margin?*/
+/* Здесь добавил gap, или стоит лучше сделать через margin?*/
 .hotels-list {
   display: flex;
   flex-wrap: wrap;
@@ -536,8 +547,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
