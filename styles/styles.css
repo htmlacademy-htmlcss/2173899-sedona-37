@@ -29,6 +29,7 @@ body {
   background-color: #f2f2f2;
 }
 
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -52,18 +53,28 @@ body {
 
 .nav {
   display: flex;
-  margin: 0 70px;
+  min-height: 64px;
+  padding: 0 70px;
+  position: relative;
 }
 
 .logo {
-  margin-right: 40px;
+  display: block;
+}
+
+.nav-logo {
+  margin-right: 28px;
+  position: absolute;
 }
 
 /*Сделал в nav-list и nav-user ширину больше чем в макете, на случай если добавятся ещё пункты меню*/
 .nav-list {
+  display: flex;
+  align-items: center;
   min-width: 440px;
   padding: 0;
   margin: 0;
+  margin-left: 168px;
   list-style: none;
 }
 
@@ -73,6 +84,7 @@ body {
 }
 
 .nav-link {
+  padding: 20px 16px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -86,6 +98,10 @@ body {
   color: #ffffff;
   background-color: #756157;
   border-radius: 4px;
+}
+
+.nav-link-btn {
+  padding: 8px 34px;
 }
 
 
@@ -106,6 +122,11 @@ body {
   text-align: center;
 }
 
+.hero-img {
+  margin-top: 51px;
+  margin-bottom: 25px;
+}
+
 
 /* Добавил векторное изображение в секции hero, но есть один нюанс при изменении масштаба слева и справа иногда  видно фоновое изображение немного, это браузер так отображает или я сделал не правильно?*/
 .hero::after {
@@ -120,10 +141,17 @@ body {
 }
 
 .advantages-title {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 69px 290px 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.advantages-desc {
+  padding: 0 274px 69px;
 }
 
 
@@ -132,6 +160,7 @@ body {
 .services-desc,
 .search-desc,
 .subscription-desc {
+  margin: 0;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
@@ -149,12 +178,15 @@ body {
 
 .advantages-item {
   width: 400px;
+  padding: 113px 85px;
+  box-sizing: border-box;
 }
 
 .advantages-item-row,
 .advantages-item-row-reverse {
   width: 1200px;
   display: flex;
+  padding: 0;
 }
 
 .advantages-item:nth-child(2n) {
@@ -168,18 +200,25 @@ body {
 
 .advantages-item-title,
 .services-item-title {
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
+.advantages-item-title {
+  margin-bottom: 62px;
+}
+
 .advantages-item-desc,
 .services-item-desc {
+  margin: 0;
   color: #333333;
 }
 
 .advantages-item-wrapper {
+  padding: 102px 85px;
   color: #ffffff;
   background-color: #82b3d3;
 }
@@ -187,6 +226,13 @@ body {
 .advantages-item-wrapper .advantages-item-desc {
   color: #ffffff;
 }
+
+.advantages-item-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 
 
 /* Services*/
@@ -198,10 +244,21 @@ body {
 .services-title,
 .search-title,
 .subscription-title {
+  margin: 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.services-title {
+  width: 505px;
+  padding: 64px 348px 0;
+  margin-bottom: 20px;
+}
+
+.services-desc {
+  padding: 0 355px 64px;
 }
 
 .services-list {
@@ -214,7 +271,24 @@ body {
 
 .services-item {
   width: 400px;
+  padding: 81px 85px;
+  box-sizing: border-box;
 }
+
+.services-item-img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+/* По макету отступ снизу у всех изображений разный, также высота services-item у меня 387px, а в макете 385px, почему так?*/
+.services-item:last-child .services-item-img {
+  margin-bottom: 28px;
+}
+
+.services-item-title {
+  margin-bottom: 30px;
+}
+
 
 .services-item:nth-child(odd) {
   background-color: rgba(131, 179, 211, 0.12);
@@ -223,7 +297,17 @@ body {
 /*Search*/
 
 .search {
+  padding: 96px 304px;
   text-align: center;
+}
+
+.search-title,
+.subscription-title {
+  margin-bottom: 20px;
+}
+
+.search-desc {
+  margin-bottom: 54px;
 }
 
 .search-btn,
@@ -234,10 +318,17 @@ body {
   text-transform: uppercase;
 }
 
+.search-btn {
+  padding: 8px 20px;
+  font-family: "PT Sans", sans-serif;
+  border: none;
+}
+
 
 /* Subscription */
 
 .subscription {
+  padding: 96px 258px 104px;
   text-align: center;
   color: #ffffff;
   background-color: #000000;
@@ -251,13 +342,23 @@ body {
 }
 
 .subscription-desc {
+  margin-bottom: 54px;
   color: #ffffff;
 }
 
+
+/*Здесь добавил к form-input свойство float: left; чтобы кнопка вместилась в форму. Ещё есть вариант через позитионирование зделать, пока не знаю как правильнее реализовать.*/
 .form-input {
+  width: 452px;
+  padding: 14px 20px;
   font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
   background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
+  border: none;
+  box-sizing: border-box;
+  float: left;
 }
 
 /* Не уверен в правильности стилизования placeholder внутри form-input*/
@@ -269,37 +370,52 @@ body {
 }
 
 .subscription-btn {
+  padding: 8px 20px;
+  width: 232px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  line-height: 36px;
   color: #ffffff;
   background-color: #82b3d3;
   border-radius: 0 4px 4px 0;
+  border: none;
+
 }
 
 
 /* Footer */
 
 .page-footer {
-  width: 1200px;
-  margin: 0 auto;
+
+  padding: 40px 70px 30px;
 }
 
 /*Задал для page-footer-inner justify-content: space-betwee незнаю правильно ли, или стоит задать размеры как в макете?*/
 .page-footer-inner {
   width: 1060px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
+/* У social-item по макету не созданы отступы друг от друга, так оставить или зделать минимальные отступы между ними?*/
 .social-list {
+  min-width: 140px;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
 }
+  /* Правильно ли реализовал список соцсетей? Или стоит зделать как в Барбершопе?*/
+.social-item a {
+  display: block;
+  padding: 12px;
+}
 
-.social-item + .social-item {
-  margin-left: 27px;
-
+.social-item-img {
+  display: block;
 }
 
 .page-footer address {
@@ -313,6 +429,10 @@ body {
   color: #000000;
   text-decoration: none;
   text-align: center;
+}
+
+.contacts-img {
+  display: block;
 }
 
 
@@ -334,6 +454,8 @@ body {
 }
 
 .inner-header-title {
+  margin: 0;
+  margin-bottom: 8px;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
@@ -346,8 +468,9 @@ body {
   list-style: none;
 }
 
-.breadcrumbs-item {
-  margin-right: 10px;
+.breadcrumbs-item + .breadcrumbs-item {
+  margin-left: 29px;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-link {
@@ -362,6 +485,7 @@ body {
 }
 
 .catalog-filter-title {
+  margin-bottom: 32px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -373,6 +497,10 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.catalog-filter-item + .catalog-filter-item {
+  margin-top: 16px;
 }
 
 .catalog-filter-item label {
@@ -404,13 +532,13 @@ body {
 .button-submit,
 .button-reset {
   width: 191px;
-  height: 36px;
+
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .button-submit,
@@ -425,17 +553,27 @@ body {
   text-transform: uppercase;
 }
 
+.button-submit {
+  margin-bottom: 32px;
+  padding: 8px 50px;
+  font-family: "PT Sans", sans-serif;
+  border: none;
+}
+
 .favourites {
   background-color: #7db54f;
 }
 
 .button-reset {
+  padding: 8px 50px;
+  font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   color: #ffffff;
   background-color: transparent;
   border-radius: 4px;
+  border: none;
   text-align: center;
   text-transform: uppercase;
 }
@@ -447,12 +585,24 @@ body {
 }
 
 .sorting {
+  margin-bottom: 40px;
   display: flex;
+  align-items: center;
 }
 
 .select-control {
+  padding: 14px 20px;
   width: 292px;
-  height: 49px;
+  font-family: "PT Sans", sans-serif;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.select-control option {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .hotel-cards-text {
@@ -486,17 +636,29 @@ body {
   gap: 20px;
   padding: 0;
   margin: 0;
+  margin-bottom: 80px;
   list-style: none;
 }
 
 .hotels-item {
   display: flex;
   flex-direction: column;
-  width: 298px;
+  width: 340px;
   padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
+  box-sizing: border-box;
 }
+
+.hotels-item-link,
+.hotels-item-img {
+  display: block;
+}
+
+.hotels-item-img {
+  margin-bottom: 16px;
+}
+
 
 .hotels-item p {
   display: flex;
@@ -510,7 +672,20 @@ body {
   color: #000000;
 }
 
+.hotels-item-title,
+.hotels-item p {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.hotels-item p:last-child {
+  margin-bottom: 0;
+}
+
 .button-more {
+  padding: 8px 20px;
+  width: 140px;
+  min-height: 36px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -520,20 +695,32 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  box-sizing: border-box;
+}
+
+.button-favourites {
+  padding: 8px 10px;
+  min-width: 140px;
+  font-family: "PT Sans", sans-serif;
+  border: none;
 }
 
 .rating {
+  padding: 8px 20px;
   font-size: 16px;
   line-height: 20px;
+  min-width: 140px;
   text-align: center;
   color: #333333;
   background-color: #f2f2f2;
   text-transform: uppercase;
   border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -580,6 +767,8 @@ body {
 }
 
 .subscription-catalog-title {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -588,6 +777,8 @@ body {
 }
 
 .subscription-catalog-desc {
+  margin: 0;
+  margin-bottom: 54px;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
