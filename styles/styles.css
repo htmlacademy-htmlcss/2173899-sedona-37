@@ -70,15 +70,17 @@ body {
 /*Сделал в nav-list и nav-user ширину больше чем в макете, на случай если добавятся ещё пункты меню*/
 .nav-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   min-width: 440px;
   padding: 0;
   margin: 0;
-  margin-left: 168px;
+  padding-left: 168px;
   list-style: none;
 }
 
 .nav-user {
+  padding-left: 0;
   min-width: 300px;
   margin-left: auto;
 }
@@ -101,7 +103,15 @@ body {
 }
 
 .nav-link-btn {
-  padding: 8px 34px;
+  display: inline-block;
+  padding: 8px 20px;
+  width: 160px;
+  min-height: 36px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 
@@ -123,7 +133,7 @@ body {
 }
 
 .hero-img {
-  margin-top: 51px;
+  padding-top: 51px;
   margin-bottom: 25px;
 }
 
@@ -150,11 +160,6 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-desc {
-  padding: 0 274px 69px;
-}
-
-
 /*Сдесь я обЪеденил классы из разных секций, чтобы было меньше кода.*/
 .advantages-desc,
 .services-desc,
@@ -164,6 +169,11 @@ body {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+}
+
+.advantages-desc {
+  padding: 0 274px;
+  margin-bottom: 69px;
 }
 
 .advantages-list {
@@ -320,6 +330,8 @@ body {
 
 .search-btn {
   padding: 8px 20px;
+  width: 376px;
+  min-height: 52px;
   font-family: "PT Sans", sans-serif;
   border: none;
 }
@@ -346,8 +358,10 @@ body {
   color: #ffffff;
 }
 
+.subscription-form {
+  display: flex;
+}
 
-/*Здесь добавил к form-input свойство float: left; чтобы кнопка вместилась в форму. Ещё есть вариант через позитионирование зделать, пока не знаю как правильнее реализовать.*/
 .form-input {
   width: 452px;
   padding: 14px 20px;
@@ -358,7 +372,6 @@ body {
   border-radius: 4px 0 0 4px;
   border: none;
   box-sizing: border-box;
-  float: left;
 }
 
 /* Не уверен в правильности стилизования placeholder внутри form-input*/
@@ -400,7 +413,7 @@ body {
 
 /* У social-item по макету не созданы отступы друг от друга, так оставить или зделать минимальные отступы между ними?*/
 .social-list {
-  min-width: 140px;
+  max-width: 142px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -408,10 +421,15 @@ body {
   margin: 0;
   list-style: none;
 }
+
+.social-item {
+  width: 47px;
+  height: 40px;
+}
   /* Правильно ли реализовал список соцсетей? Или стоит зделать как в Барбершопе?*/
 .social-item a {
   display: block;
-  padding: 12px;
+  padding: 11px;
 }
 
 .social-item-img {
@@ -653,6 +671,10 @@ body {
 .hotels-item-link,
 .hotels-item-img {
   display: block;
+}
+
+.hotels-item-link {
+  text-decoration: none;
 }
 
 .hotels-item-img {
