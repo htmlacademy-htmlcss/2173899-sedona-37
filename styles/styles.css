@@ -654,10 +654,9 @@ body {
   list-style: none;
 }
 
-/* Здесь добавил gap, или стоит лучше сделать через margin?*/
 .hotels-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
   gap: 20px;
   padding: 0;
   margin: 0;
@@ -666,8 +665,10 @@ body {
 }
 
 .hotels-item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: 1fr auto;
+  gap: 16px 20px;
   width: 340px;
   padding: 20px;
   border: 1px solid #e6e6e6;
@@ -682,15 +683,7 @@ body {
 
 .hotels-item-link {
   text-decoration: none;
-}
-
-.hotels-item-img {
-  margin-bottom: 16px;
-}
-
-.hotels-item p {
-  display: flex;
-  justify-content: space-between;
+  grid-column: 1/-1;
 }
 
 .hotels-item-title {
@@ -703,11 +696,6 @@ body {
 .hotels-item-title,
 .hotels-item p {
   margin: 0;
-  margin-bottom: 16px;
-}
-
-.hotels-item p:last-child {
-  margin-bottom: 0;
 }
 
 .button-more {
@@ -732,6 +720,11 @@ body {
   min-height: 36px;
   font-family: "PT Sans", sans-serif;
   border: none;
+}
+
+.hotel-price {
+  width: 140px;
+  text-align: right;
 }
 
 .rating {
