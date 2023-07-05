@@ -76,7 +76,7 @@ body {
 }
 
 .nav-link {
-  padding: 20px 16px;
+  padding: 19px 16px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -153,6 +153,7 @@ body {
   list-style: none;
 }
 
+/*
 .nav-link-current {
   text-decoration: underline;
   text-decoration-color: #756257;
@@ -160,24 +161,30 @@ body {
   text-underline-offset: 19px;
   text-underline-position: under;
 }
+*/
 
-/*
+.nav-link-current {
+  position: relative;
+}
+
 .nav-link-current::after {
   content: "";
-  width: 100%;
+  width: calc(100% - 32px);
   height: 2px;
   background-color: #756257;
-  bottom: 0;
-  left: 0;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
 }
-*/
+
 
 .nav-user {
   padding-left: 0;
   max-width: 300px;
   margin-left: auto;
 }
+
 
 .nav-user
 .nav-item:nth-child(1)
@@ -271,7 +278,7 @@ body {
   color: #ffffff;
   background-color: #000000;
   background-image: url(../images/index-background.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   position: relative;
@@ -1333,15 +1340,16 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .select-control {
-  padding: 10px 15px;
+  padding: 14px 20px;
+  padding-right: 40px;
   width: 292px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  border: 2px solid #e5e5e5;
+  outline: 2px solid #e5e5e5;
   border-radius: 4px;
   box-sizing: border-box;
-  outline: none;
+  border: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url(../images/icons/icon_down-arrow.svg);
@@ -1351,11 +1359,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .select-control:hover,
 .select-control:focus {
-  border: 2px solid #68a2ca;
+  outline: 2px solid #68a2ca;
 }
 
 .select-control:disabled {
-  border: 2px solid rgba(0, 0, 0, 0.3);
+  outline: 2px solid rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1377,14 +1385,16 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .type-cards {
   display: flex;
+  flex-wrap: wrap;
+  width: 160px;
   padding: 0;
   margin: 0;
   margin-left: auto;
   list-style: none;
 }
 
-.type-cards-item + .type-cards-item {
-  margin-left: 8px;
+.type-cards-item:not(:nth-child(3n)) {
+  margin-right: 8px;
 }
 
 .button-type-cards {
@@ -1433,9 +1443,11 @@ input[type="number"]::-webkit-inner-spin-button {
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
   padding: 0;
+  padding-bottom: 40px;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   list-style: none;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .hotels-item {
