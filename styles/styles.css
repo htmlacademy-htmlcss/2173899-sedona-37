@@ -160,6 +160,7 @@ body {
   text-underline-offset: 19px;
   text-underline-position: under;
 }
+
 /*
 .nav-link-current::after {
   content: "";
@@ -171,6 +172,7 @@ body {
   position: absolute;
 }
 */
+
 .nav-user {
   padding-left: 0;
   max-width: 300px;
@@ -654,6 +656,306 @@ body {
   fill: rgba(117, 97, 87, 0.30);
 }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+  z-index: 2;
+
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  margin-top: 396px;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-hotel-search {
+  width: 717px;
+}
+
+.modal-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding: 0;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus {
+  outline: 3px solid #82b3d3;
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active path{
+  opacity: 0.3;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.modal-field-group + .modal-field-group {
+  margin-top: 48px;
+}
+
+.modal-field-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.form-hotel-search-labet {
+  font-size: 20px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.form-hotel-search-input {
+  color: #000;
+  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  width: 440px;
+  padding: 12px 20px;
+  padding-right: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  background-image: url(../images/icons/icon-colendar.svg);
+  background-repeat: no-repeat;
+  background-position: center right 23px;
+  box-sizing: border-box;
+}
+
+.error {
+  position: relative;
+}
+
+.modal-error {
+  content: "";
+  font: inherit;
+  font-size: 16px;
+  padding: 0 20px;
+  color: #ff5757;
+  position: absolute;
+  bottom: -25px;
+  left: 137px;
+  display: block;
+}
+
+.available-rooms {
+  content: "";
+  font: inherit;
+  font-size: 16px;
+  padding: 0 20px;
+  color: #333333;
+  position: absolute;
+  bottom: -25px;
+  left: 137px;
+  display: block;
+}
+
+.number-of-adults {
+  width: 247px;
+}
+
+.number-of-children {
+  width: 242px;
+  position: relative;
+}
+
+.number-of-adults,
+.number-of-children {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.adults,
+.children {
+  margin-right: auto;
+}
+
+.less,
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  border: none;
+  outline: none;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+.less:hover path {
+  fill: #000000;
+  fill-opacity: 1;
+}
+
+.less:focus path {
+  fill: #000000;
+  fill-opacity: 1;
+}
+
+.less:focus svg {
+  border-radius: 4px;
+  outline: 3px solid #82b3d3;
+}
+
+.less:active path {
+  fill-opacity: 0.2;
+}
+
+.more:hover path {
+  fill: #000000;
+  fill-opacity: 1;
+}
+
+.more:focus path {
+  fill: #000000;
+  fill-opacity: 1;
+}
+
+.more:focus svg {
+  border-radius: 4px;
+  outline: 3px solid #82b3d3;
+}
+
+
+.more:active path {
+  fill-opacity: 0.2;
+}
+
+
+.less {
+  padding: 14px 10px;
+  border-radius: 4px 0 0 4px;
+}
+
+.more {
+  padding: 14px 10px;
+  border-radius: 0 4px 4px 0;
+}
+
+.input-adult-choice,
+.input-children-choice {
+  font: inherit;
+  font-weight: 700;
+  line-height: 20px;
+  width: 31px;
+  padding: 14px 5px;
+  border: none;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.modal-search-link {
+  text-decoration: none;
+}
+
+.modal-search-button {
+  font: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  width: 100%;
+  display: block;
+  margin-top: 48px;
+  padding: 18px 77px;
+  color: #ffffff;
+  background-color: #83b3d3;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: #83b3d3;
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 22px;
+  border-radius: 10px;
+  display: block;
+  width: 256px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 41px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.tooltip-text:before {
+  content: '';
+  background-image: url("../images/icons/triangle.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip {
+  position: absolute;
+  left: 59px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 /* Catalog */
 
@@ -747,6 +1049,7 @@ body {
 
 .catalog-filter-title {
   margin-bottom: 32px;
+  padding: 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -776,8 +1079,59 @@ body {
   border: none;
 }
 
+.control {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control-input:focus + .control-mark{
+  outline: 3px solid #83b3d3;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-mark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.control-mark-checked {
+  background-image: url(../images/icons/tick.svg);
+  background-size: 20px 20px;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+  content: "";
+}
+
 .catalog-filter-group-infra {
   min-width: 151px;
+  padding-bottom: 3px;
 }
 
 .catalog-filter-group-infra + .catalog-filter-group-infra {
@@ -788,6 +1142,106 @@ body {
   width: 288px;
   margin-left: 140px;
   margin-right: 70px;
+}
+
+.range {
+  display: flex;
+  margin-bottom: 44px;
+}
+
+.range-input {
+  width: 143px;
+  font: inherit;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 12px 20px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  color: #000000;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.range-input:hover {
+  background-color: #e6e6e6;
+}
+
+.range-input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.range-input-from-text,
+.range-input-to-text {
+  position: relative;
+}
+
+.range span {
+  content: "";
+  position: absolute;
+  color: #000000;
+  opacity: 0.3;
+  line-height: 24px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.range-input-from-text {
+  margin-right: 2px;
+}
+
+.range-input-from-text .range-input {
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input-to-text .range-input {
+  border-radius: 0 4px 4px 0;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  width: 226px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.range-toggle:active {
+  outline: 2px solid #83b3d3;
+}
+
+.toggle-min {
+  top: -8px;
+}
+
+.toggle-max {
+  top: -8px;
+  left: 207px
 }
 
 .button-submit,

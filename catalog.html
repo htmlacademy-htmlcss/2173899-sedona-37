@@ -66,21 +66,24 @@
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label>
-                  <input type="checkbox" name="pool" checked>
-                  Бассейн
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="pool" checked>
+                  <span class="control-mark control-mark-checked"></span>
+                  <span class="control-label">Бассейн</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label>
-                  <input type="checkbox" name="parking" checked>
-                  Парковка
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                  <span class="control-mark control-mark-checked"></span>
+                  <span class="control-label">Парковка</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label>
-                  <input type="checkbox" name="wi-fi">
-                  Wi-Fi
+                <label class="control">
+                  <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Wi-Fi</span>
                 </label>
               </li>
             </ul>
@@ -90,21 +93,24 @@
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label>
-                  <input type="radio" name="type" value="hotel" checked>
-                  Гостиница
+                <label class="control">
+                  <input class="visually-hidden control-input" type="radio" name="type" value="hotel" checked>
+                  <span class="control-mark"></span>
+                  <span class="control-label">Гостиница</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label>
-                  <input type="radio" name="type" value="motel">
-                  Мотель
+                <label class="control">
+                  <input class="visually-hidden control-input" type="radio" name="type" value="motel">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Мотель</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label>
-                  <input type="radio" name="type" value="apartments">
-                  Апартаменты
+                <label class="control">
+                  <input class="visually-hidden control-input" type="radio" name="type" value="apartments">
+                  <span class="control-mark"></span>
+                  <span class="control-label">Апартаменты</span>
                 </label>
               </li>
             </ul>
@@ -112,6 +118,28 @@
 
           <fieldset class="catalog-filter-group catalog-filter-group-price">
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+            <div class="range">
+              <label class="range-input-from-text">
+                <input class="range-input" type="number" value="0">
+                <span>от</span>
+              </label>
+
+              <label class="range-input-to-text">
+                <input class="range-input" type="number" value="9000">
+                <span>до</span>
+              </label>
+            </div>
+            <div class="range-scale">
+              <div class="range-bar">
+                <button class="range-toggle toggle-min" type="button">
+                  <span class="visually-hidden">Изменить минимальную цену.</span>
+                </button>
+                <button class="range-toggle toggle-max" type="button">
+                  <span class="visually-hidden">Изменить максимальную цену.</span>
+                </button>
+              </div>
+
+            </div>
           </fieldset>
           <div class="buttons">
             <button class="button-submit light-button" type="submit">Применить</button>
