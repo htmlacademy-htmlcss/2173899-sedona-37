@@ -309,7 +309,7 @@ body {
 .advantages-title {
   margin: 0;
   margin-bottom: 25px;
-  padding: 0 290px;
+  padding: 0 285px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -326,7 +326,7 @@ body {
 }
 
 .advantages-desc {
-  padding: 0 274px;
+  padding: 0 270px;
   margin-bottom: 90px;
 }
 
@@ -342,7 +342,7 @@ body {
 
 .advantages-item {
   width: 400px;
-  padding: 113px 85px;
+  padding: 112px 84px;
   box-sizing: border-box;
 }
 
@@ -477,7 +477,7 @@ body {
 }
 /* По макету отступ снизу у всех изображений разный, также высота services-item у меня 387px, а в макете 385px, почему так?*/
 .services-item:last-child .services-item-img {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .services-item-title {
@@ -575,7 +575,6 @@ body {
 /* Footer */
 
 .page-footer {
-
   padding: 40px 70px 30px;
 }
 
@@ -667,7 +666,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  display: none;
+  display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(242, 242, 242, 0.8);
@@ -676,6 +675,7 @@ body {
 }
 
 .modal {
+  width: 717px;
   position: relative;
   margin: auto;
   margin-top: 396px;
@@ -684,10 +684,6 @@ body {
   box-sizing: border-box;
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
-}
-
-.modal-hotel-search {
-  width: 717px;
 }
 
 .modal-close-button {
@@ -735,11 +731,12 @@ body {
 }
 
 .modal-field-group + .modal-field-group {
-  margin-top: 48px;
+  margin-top: 23px;
 }
 
 .modal-field-group {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 0;
@@ -754,12 +751,12 @@ body {
 }
 
 .form-hotel-search-input {
-  color: #000;
+  color: #000000;
   font-size: 18px;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   line-height: 24px;
-  width: 440px;
+  min-width: 440px;
   padding: 12px 20px;
   padding-right: 50px;
   border: none;
@@ -771,32 +768,33 @@ body {
   box-sizing: border-box;
 }
 
-.error {
-  position: relative;
+.form-hotel-search-input:hover {
+  background-color: #e6e6e6;
+}
+
+.form-hotel-search-input:focus {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
 }
 
 .modal-error {
-  content: "";
   font: inherit;
   font-size: 16px;
-  padding: 0 20px;
   color: #ff5757;
-  position: absolute;
-  bottom: -25px;
-  left: 137px;
-  display: block;
+  width: 100%;
+  text-align: left;
+  padding-left: 157px;
+  margin-top: 4px;
 }
 
 .available-rooms {
-  content: "";
   font: inherit;
   font-size: 16px;
-  padding: 0 20px;
   color: #333333;
-  position: absolute;
-  bottom: -25px;
-  left: 137px;
-  display: block;
+  width: 100%;
+  text-align: left;
+  padding-left: 157px;
+  margin-top: 4px;
 }
 
 .number-of-adults {
@@ -895,6 +893,17 @@ body {
   text-align: center;
 }
 
+
+.input-adult-choice[type="number"]::-webkit-outer-spin-button,
+.input-adult-choice[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.input-children-choice[type="number"]::-webkit-outer-spin-button,
+.input-children-choice[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .modal-search-link {
   text-decoration: none;
 }
@@ -914,6 +923,16 @@ body {
   border-radius: 10px;
   text-align: center;
   box-sizing: border-box;
+}
+
+.modal-search-button:hover,
+.modal-search-button:focus {
+  background-color: #68a2cA;
+}
+
+.modal-search-button:active {
+  background-color: #68a2cA;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .tooltip-toggle {
@@ -942,6 +961,7 @@ body {
   top: 41px;
   right: 50%;
   transform: translateX(50%);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
 }
 
 .tooltip-text:before {
@@ -1148,7 +1168,6 @@ body {
 .catalog-filter-group-price {
   width: 288px;
   margin-left: 140px;
-  margin-right: 70px;
 }
 
 .range {
@@ -1178,9 +1197,13 @@ body {
   outline: 3px solid #83b3d3;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+.range-input[type="number"]::-webkit-outer-spin-button,
+.range-input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.range-input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .range-input-from-text,
@@ -1260,6 +1283,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin-left: auto;
 }
 
 .button-submit,
@@ -1355,6 +1379,7 @@ input[type="number"]::-webkit-inner-spin-button {
   background-image: url(../images/icons/icon_down-arrow.svg);
   background-repeat: no-repeat;
   background-position: center right 20px;
+  background-color: #ffffff;
 }
 
 .select-control:hover,

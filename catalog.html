@@ -10,7 +10,7 @@
 
   <!--Header-->
 
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <nav class="nav">
         <a class="nav-logo" href="index.html">
           <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип седоны.">
@@ -49,7 +49,7 @@
 
     <!--Main-->
 
-    <main class="main-inner">
+    <main class="main-inner" data-test="main">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs-list">
@@ -61,7 +61,7 @@
           </li>
         </ul>
 
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
           <fieldset class="catalog-filter-group catalog-filter-group-infra">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
@@ -148,7 +148,7 @@
         </form>
       </header>
 
-      <section class="hotel-cards">
+      <section class="hotel-cards" data-test="catalog">
         <div class="sorting">
           <h2 class="visually-hidden">Список гостиниц</h2>
           <p class="hotel-cards-text">Найдено гостиниц: 38</p>
@@ -256,7 +256,7 @@
         </ul>
       </section>
 
-      <section class="subscription subscription-catalog">
+      <section class="subscription subscription-catalog" data-test="subscribe">
         <h2 class="subscription-catalog-title">Подпишитесь на рассылку</h2>
         <p class="subscription-catalog-desc">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -270,7 +270,7 @@
 
     <!--Footer-->
 
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <div class="page-footer-inner">
         <ul class="social-list">
           <li class="social-item">
