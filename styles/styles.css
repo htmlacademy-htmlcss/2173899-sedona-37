@@ -751,7 +751,6 @@ body {
   line-height: 24px;
   text-transform: capitalize;
   max-width: 120px;
-  margin-right: auto;
 }
 
 .form-hotel-search-input {
@@ -763,6 +762,7 @@ body {
   min-width: 440px;
   padding: 12px 20px;
   padding-right: 50px;
+  margin-left: auto;
   border: none;
   border-radius: 4px;
   background-color: #f2f2f2;
@@ -817,9 +817,12 @@ body {
   margin: 0;
 }
 
-.adults,
-.children {
+.adults {
   margin-right: auto;
+}
+
+.children {
+  width: min-content;
 }
 
 .less,
@@ -987,10 +990,9 @@ body {
 }
 
 .tooltip {
-  position: absolute;
-  left: 59px;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  margin-right: auto;
+  margin-left: 10px;
 }
 
 /* Catalog */
