@@ -9,7 +9,7 @@
     <div class="page-container">
 
       <!--Header-->
-      <header class="page-header" data-test="header">
+      <header class="page-header">
         <nav class="nav">
           <a class="nav-logo" href="#">
             <img class="logo" src="images/logo.svg" width="140" height="70" alt="Логотип седоны.">
@@ -47,13 +47,13 @@
 
       <!--Main-->
 
-      <main class="main-index main-container" data-test="main">
-        <section class="hero" data-test="hero">
+      <main class="main-index main-container">
+        <section class="hero">
           <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
           <img class="hero-img" src="images/welcome-sedona.svg" width="458" height="352" alt="welcome to the gorgeous sedona because the grand canyon sucks.">
         </section>
 
-        <section class="advantages" data-test="advantages">
+        <section class="advantages">
             <h2 class="advantages-title">Седона — небольшой городок в Аризоне,
             заслуживающий большего!</h2>
             <p class="advantages-desc">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -91,7 +91,7 @@
           </ul>
         </section>
 
-        <section class="services" data-test="service">
+        <section class="services">
           <h2 class="services-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
           <p class="services-desc">Опытный персонал и качественное обслуживание!</p>
           <ul class="services-list">
@@ -116,13 +116,13 @@
           </ul>
         </section>
 
-        <section class="search" data-test="search">
+        <section class="search">
           <h2 class="search-title">Заинтересовались?</h2>
           <p class="search-desc">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <button class="search-btn dark-button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
         </section>
 
-        <section class="subscription" data-test="subscribe">
+        <section class="subscription">
           <h2 class="subscription-title">Подпишитесь на рассылку</h2>
           <p class="subscription-desc">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -135,7 +135,7 @@
 
       <!--Footer-->
 
-      <footer class="page-footer" data-test="footer">
+      <footer class="page-footer">
         <div class="page-footer-inner">
           <ul class="social-list">
             <li class="social-item">
@@ -188,7 +188,7 @@
               d="M14.5 1.78 13.2.5 7.49 6.2 1.79.5.48 1.8l5.7 5.7-5.7 5.7 1.3 1.3 5.7-5.7 5.7 5.7 1.3-1.3-5.7-5.7 5.7-5.7Z" />
           </svg>
         </button>
-        <section class="modal-content">
+        <section class="modal-content" data-test="modal">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="form-hotel-search" action="https://echo.htmlacademy.ru/" method="post">
             <p class="modal-field-group error">
@@ -239,7 +239,7 @@
                 </button>
               </p>
             </div>
-            <button class="modal-search-button" type="submit">Найти</button>
+            <a class="modal-search-link modal-search-button" href="#">Найти</a>
           </form>
         </section>
       </div>
