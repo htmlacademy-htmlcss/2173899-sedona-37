@@ -299,7 +299,8 @@ body {
 
 .advantages-item {
   width: 400px;
-  padding: 112px 84px;
+  min-height: 385px;
+  padding: 112px 80px;
   box-sizing: border-box;
 }
 
@@ -422,7 +423,7 @@ body {
 
 .services-item {
   width: 400px;
-  padding: 81px 85px;
+  padding: 81px 80px;
   box-sizing: border-box;
 }
 
@@ -1212,6 +1213,10 @@ body {
   border-radius: 6px;
   border: none;
   cursor: pointer;
+}
+
+.range-toggle:hover {
+  background-image: radial-gradient(circle, #fff 20%, #83b3d3 100%);
 }
 
 .range-toggle:focus {
