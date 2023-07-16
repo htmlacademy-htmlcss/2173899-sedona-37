@@ -97,20 +97,17 @@
           <h2 class="services-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
           <p class="services-desc">Опытный персонал и качественное обслуживание!</p>
           <ul class="services-list">
-            <li class="services-item">
-              <img class="services-item-img" src="images/icons/icon-house.svg" width="75" height="72" alt="иконка домика.">
+            <li class="services-item services-item-house">
               <h3 class="services-item-title">Жильё</h3>
               <p class="services-item-desc">Рекомендуем пожить<br> в настоящем мотеле,<br>
               всё как в кино!</p>
             </li>
-            <li class="services-item">
-              <img class="services-item-img" src="images/icons/icon-food.svg" width="75" height="72" alt="иконка еды.">
+            <li class="services-item services-item-food">
               <h3 class="services-item-title">Еда</h3>
               <p class="services-item-desc">Всегда заказывайте<br>
               топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="services-item">
-              <img class="services-item-img" src="images/icons/icon-gift.svg" width="75" height="72" alt="иконка сувенира.">
+            <li class="services-item services-item-gift">
               <h3 class="services-item-title">Сувениры</h3>
               <p class="services-item-desc">Не только китайского,<br>
               но и настоящего местного производства!</p>
@@ -129,7 +126,7 @@
           <p class="subscription-desc">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="email">Email.</label>
-            <input class="form-input" type="email" name="email" id="email" placeholder="Ваш e-mail">
+            <input class="form-input" type="email" name="email" id="email" placeholder="Ваш e-mail" required>
             <button class="subscription-btn light-button" type="submit">Подписаться</button>
           </form>
         </section>
@@ -200,12 +197,12 @@
           <form class="form-hotel-search" action="https://echo.htmlacademy.ru/" method="post">
             <p class="modal-field-group error">
               <label class="form-hotel-search-labet" for="arrival">Дата заезда:</label>
-              <input class="form-hotel-search-input" type="text" name="arrival-date" id="arrival" value="27 апреля 2020" placeholder="Укажите дату">
+              <input class="form-hotel-search-input" type="text" name="arrival-date" id="arrival" value="27 апреля 2020" placeholder="Укажите дату" required>
               <span class="modal-error">Мы не можем отправить вас в прошлое.</span>
             </p>
             <p class="modal-field-group error">
               <label class="form-hotel-search-labet" for="departure">Дата выезда:</label>
-              <input class="form-hotel-search-input" type="text" name="departure-date" id="departure" value="1 сентября 2023" placeholder="Укажите дату">
+              <input class="form-hotel-search-input" type="text" name="departure-date" id="departure" value="1 сентября 2023" placeholder="Укажите дату" required>
               <span class="available-rooms">На эти даты есть свободные номера. Пока есть.</span>
             </p>
             <div class="modal-field-group number-of-people">
