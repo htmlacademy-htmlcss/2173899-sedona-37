@@ -19,8 +19,8 @@ html {
 }
 
 body {
+  width: 1200px;
   height: 100%;
-  width: 1280px;
   margin: 0 auto;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -469,6 +469,29 @@ body {
   box-sizing: border-box;
 }
 
+.services-item-house {
+  background-image: url(../images/icons/icon-house.svg);
+  background-repeat: no-repeat;
+  background-position: top 80px center;
+  background-size: 76px 72px;
+}
+
+.services-item-food {
+  background-image: url(../images/icons/icon-food.svg);
+  background-repeat: no-repeat;
+  background-position: top 80px center;
+  background-size: 75px 70px;
+}
+
+.services-item-gift {
+  background-image: url(../images/icons/icon-gift.svg);
+  background-repeat: no-repeat;
+  background-position: top 80px center;
+  background-size: 76px 76px;
+}
+
+
+
 .services-item-img {
   display: block;
   margin: 0 auto;
@@ -477,6 +500,7 @@ body {
 
 .services-item-title {
   margin-bottom: 30px;
+  padding-top: 102px;
 }
 
 .services-item:nth-child(odd) {
@@ -1229,7 +1253,7 @@ body {
 }
 
 .catalog-filter-group-infra {
-  min-width: 151px;
+  width: 151px;
   padding-bottom: 3px;
 }
 
@@ -1368,13 +1392,11 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
+  padding-top: 56px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
 }
 
 .button-submit,
@@ -1673,8 +1695,33 @@ body {
   text-align: right;
 }
 
+.two-stars {
+  width: 140px;
+  background-image: url(../images/icons/icon-two-stars.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 140px 37px;
+}
+
+.three-stars {
+  width: 140px;
+  background-image: url(../images/icons/icon-three-stars.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 140px 37px;
+}
+
+.four-stars {
+  width: 140px;
+  background-image: url(../images/icons/icon-four-stars.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 140px 37px;
+}
+
 .rating {
   min-width: 140px;
+  min-height: 37px;
   padding: 8px 10px;
   font-size: 16px;
   line-height: 20px;
